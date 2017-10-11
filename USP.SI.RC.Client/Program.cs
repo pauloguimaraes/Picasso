@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace USP.SI.RC.Server
+namespace USP.SI.RC.Client
 {
     static class Program
     {
@@ -13,7 +13,7 @@ namespace USP.SI.RC.Server
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmServer());
+            Application.Run(new FrmClient());
         }
     }
 }

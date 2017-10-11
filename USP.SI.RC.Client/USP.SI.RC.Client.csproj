@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{540F425D-25E4-4239-A4B2-2EAC1643B0EA}</ProjectGuid>
+    <ProjectGuid>{495335D9-4364-4FA4-863A-0154D9BD9E51}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>USP.SI.RC.Server</RootNamespace>
-    <AssemblyName>USP.SI.RC.Server</AssemblyName>
+    <RootNamespace>USP.SI.RC.Client</RootNamespace>
+    <AssemblyName>USP.SI.RC.Client</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -48,19 +48,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Connection.cs" />
-    <Compile Include="FrmServer.cs">
+    <Compile Include="FrmClient.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmServer.Designer.cs">
-      <DependentUpon>FrmServer.cs</DependentUpon>
+    <Compile Include="FrmClient.Designer.cs">
+      <DependentUpon>FrmClient.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ServerClass.cs" />
-    <Compile Include="StatusChangedEventArgs.cs" />
-    <EmbeddedResource Include="FrmServer.resx">
-      <DependentUpon>FrmServer.cs</DependentUpon>
+    <EmbeddedResource Include="FrmClient.resx">
+      <DependentUpon>FrmClient.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -86,6 +83,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\USP.SI.RC.Components\USP.SI.RC.Components.csproj">
+      <Project>{e414d958-6b00-4892-85c3-823ece564441}</Project>
+      <Name>USP.SI.RC.Components</Name>
+    </ProjectReference>
     <ProjectReference Include="..\USP.SI.RC.Util\USP.SI.RC.Util.csproj">
       <Project>{be3d28e5-d727-47e4-94c3-f10c6fcfb785}</Project>
       <Name>USP.SI.RC.Util</Name>
